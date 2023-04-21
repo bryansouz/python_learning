@@ -8,6 +8,43 @@
     - Variáveis
         - explica o que é variaveis(q eu ja sei)
         - tipos nativos, boolean, string, NoneType e falou sobre “type”
+    - Numéros
+        - nada de novo
+    - String
+        
+        ```
+        palavras = "aqui tem um texto"
+        print(palavras.replace('tem', 'nao tem'))
+        print(palavras.find('tem'))
+        print(palavras.upper())
+        
+        *// aqui nao tem um texto
+        // 5
+        // AQUI TEM UM TEXTO*
+        ```
+        
+        ```
+        latlong = '523;435'
+        corte = latlong.find(';')
+        lat = latlong[1+corte:len(latlong)]
+        log = latlong[0:corte]
+        
+        print('latutude: |'+lat+'| longitude: |'+ log+'|')
+        
+        ```
+        
+        - upper(), replece, find(), esses eu usei pouco
+    - Booleano
+        
+        ```
+        senha_cartao = 1234
+        senha_digitada = 1334
+        verificar = senha_cartao == senha_digitada
+        print(verificar)
+        ```
+        
+        - nada de novo
+    - parei em listas
 - Python Estruturas de Dados
 - Python Fluxo Condicional & Repetições
 - Python Arquivos & Funções
