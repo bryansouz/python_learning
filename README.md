@@ -1,4 +1,3 @@
-# Analista de Dados - 47h | 20/04  
 ## Python
 
 ---
@@ -126,9 +125,51 @@
             
     - Dicionários
         
+        criar
+        
+        ```jsx
+        dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
+        ou
+        dicionario = dict(chave1='valor1', chave2='valor2')
+        ```
+        
+        acessar
+        
         ```jsx
         dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
         print(dicionario['chave1'])  # saída: 'valor1'
+        ```
+        
+        adicionar
+        
+        ```jsx
+        dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
+        dicionario['chave3'] = 'valor3'
+        print(dicionario)  # saída: {'chave1': 'valor1', 'chave2': 'valor2', 'chave3': 'valor3'}
+        ```
+        
+        remover
+        
+        ```jsx
+        dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
+        del dicionario['chave1']
+        print(dicionario)  # saída: {'chave2': 'valor2'}
+        ```
+        
+        Ordenar
+        
+        ```jsx
+        dicionario = {'b': 2, 'a': 1, 'c': 3}
+        dicionario_ordenado = sorted(dicionario.items(), key=lambda x: x[0])
+        print(dicionario_ordenado)  # saída: [('a', 1), ('b', 2), ('c', 3)]
+        ```
+        
+        Verificar
+        
+        ```jsx
+        dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
+        print('chave1' in dicionario)  # saída: True
+        print('chave3' in dicionario)  # saída: False
         ```
         
 - Python Fluxo Condicional & Repetições
