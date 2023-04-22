@@ -44,7 +44,7 @@
         ```
         
         - nada de novo
-    - parei em listas
+    - parei em listas(arrays)
 - Python Estruturas de Dados
 - Python Fluxo Condicional & Repetições
 - Python Arquivos & Funções
