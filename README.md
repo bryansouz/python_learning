@@ -88,7 +88,7 @@
             ```
             
     - Conjuntos
-        - união
+        - União
             
             ```
             conjunto1 = {1, 2, 3}
@@ -97,7 +97,7 @@
             print(uniao)  # saída: {1, 2, 3, 4}
             ```
             
-        - interseção
+        - Interseção
             
             ```
             conjunto1 = {1, 2, 3}
@@ -106,7 +106,7 @@
             print(intersecao)  # saída: {2, 3}
             ```
             
-        - diferença
+        - Diferença
             
             ```
             conjunto1 = {1, 2, 3}
@@ -115,7 +115,7 @@
             print(diferenca)  # saída: {1}
             ```
             
-        - teste de pertinência.
+        - Teste de pertinência.
             
             ```
             conjunto = {1, 2, 3}
@@ -125,7 +125,7 @@
             
     - Dicionários
         
-        criar
+        Criar
         
         ```jsx
         dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
@@ -133,14 +133,14 @@
         dicionario = dict(chave1='valor1', chave2='valor2')
         ```
         
-        acessar
+        Acessar
         
         ```jsx
         dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
         print(dicionario['chave1'])  # saída: 'valor1'
         ```
         
-        adicionar
+        Adicionar
         
         ```jsx
         dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
@@ -148,7 +148,7 @@
         print(dicionario)  # saída: {'chave1': 'valor1', 'chave2': 'valor2', 'chave3': 'valor3'}
         ```
         
-        remover
+        Remover
         
         ```jsx
         dicionario = {'chave1': 'valor1', 'chave2': 'valor2'}
@@ -173,7 +173,78 @@
         ```
         
 - Python Fluxo Condicional & Repetições
+    - Estrutura condicional if - else - elif
+        
+        a) Crie um programa que solicite ao usuário um número inteiro e verifique se ele é positivo, negativo ou igual a zero. Caso seja positivo, exiba a mensagem "O número é positivo", caso seja negativo, exiba "O número é negativo" e caso seja igual a zero, exiba "O número é igual a zero".
+        
+        ```python
+        number = -1
+        if(number > 0):
+          print('O número é positivo')
+        else:
+          print('O número é negativo')
+        ```
+        
+        b) Crie um programa que solicite ao usuário o seu nome e a sua idade e verifique se ele é maior de idade ou não. Caso seja maior de idade, exiba a mensagem "Seja bem-vindo, [nome]!", caso contrário, exiba a mensagem "Você não tem idade suficiente para acessar este site."
+        
+        ```python
+        nome = 'Bryan'
+        number = 12
+        if(number >= 18):
+          print('Seja bem-vindo,', nome +'!')
+        else:
+          print('Você não tem idade suficiente para acessar este site.')
+        ```
+        
+    - Estrutura condicional try, cacth, finally
+        
+        a) Crie um programa que solicite ao usuário um número inteiro e tente convertê-lo para float. Caso ocorra um erro de conversão, exiba a mensagem "O valor inserido não é um número inteiro válido", caso contrário, exiba o valor convertido.
+        
+        ```python
+        numero = 2
+        try:
+          print("O número convertido é:", numero)
+        except ValueError:
+            print("O valor inserido não é um número inteiro válido")
+        ```
+        
+        b) Crie um programa que solicite ao usuário o nome de um arquivo e tente abrir esse arquivo. Caso ocorra um erro de abertura do arquivo, exiba a mensagem "Não foi possível abrir o arquivo", caso contrário, exiba o conteúdo do arquivo.
+        
+        ```python
+        try:
+            arquivo = open("meu_arquivo.txt", "r")
+            print("O arquivo foi aberto com sucesso!")
+        except IOError:
+            print("Não foi possível abrir o arquivo")
+        ```
+        
+    - Estrutura condicional for - in - range
+        
+        a) Crie um programa que exiba na tela todos os números pares de 0 a 10 utilizando a estrutura de repetição for.
+        
+        ```python
+        for valor in range(0,12,2):
+          print(valor)
+        ```
+        
+        b) Crie um programa que solicite ao usuário uma palavra e exiba na tela a quantidade de vogais que essa palavra possui utilizando a estrutura de repetição for e a função in.
+        
+        ```python
+        palavra = 'maranhao'
+        letras = list(palavra)
+        vogais = 'aeiou'
+        array = []
+        for l in letras:
+          for v in list(vogais):
+            if(l == v):
+              array.append(l)
+              print(array)
+        ```
+        
 - Python Arquivos & Funções
+    
+    parei aqui
+    
 - Python Programação Funcional
 - Python Programação Orientada a Objetos
 - Python Módulos & Pacotes
