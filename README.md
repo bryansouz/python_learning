@@ -242,8 +242,35 @@
         ```
         
 - Python Arquivos & Funções
-    
-    parei aqui
+    - Leitura
+        1. Qual o comando utilizado para ler arquivos no Python? 
+            1. with open 
+        2. Quais são os modos de leitura disponíveis ao utilizar o comando **`open`**?
+            1. R: Ler
+            2. W: Sobreescrever
+            3. A: Acrescentar
+        3. O que faz o comando **`read`**?
+            1. Lê o arquivo 
+        4. O que faz o comando **`readline`**?
+        5. Como podemos extrair valores específicos de um arquivo CSV utilizando Python?
+    - Escrita
+        
+        Os modos de leitura:
+        
+        R(padrão
+        
+        W: sobreescrever original
+        
+        A: Add mais linhas
+        
+        Copiando um arquivo com uma extensão diferente.
+        
+        Comando para ler/escrever arquivos.
+        
+        Comando para escrever em um arquivo, se o arquivo não existir, ele será criado.
+        
+    - Funções
+    - Escopo
     
 - Python Programação Funcional
 - Python Programação Orientada a Objetos
