@@ -259,15 +259,15 @@
     43,services,married,primary,no,-88,yes,yes
     ``````
     ## Comando para ler todo o conteúdo de um arquivo.
-    ```
+    ``````
     with open(file='./banco.csv', mode='r', encoding='utf8') as db:
     print(db.read())
-    ```
+    ``````
     ## Comando para ler o conteúdo de um arquivo uma linha por vez.
     ``````
     with open(file='./banco.csv', mode='r', encoding='utf8') as linha:
     print(linha.readline())
-    `````````
+    ``````
     ## Extraindo os valores da primeira coluna (idade).
     ``````
     array = []
