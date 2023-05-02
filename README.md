@@ -242,35 +242,66 @@
         ```
         
 - Python Arquivos & Funções
-    - Leitura
-        1. Qual o comando utilizado para ler arquivos no Python? 
-            1. with open 
-        2. Quais são os modos de leitura disponíveis ao utilizar o comando **`open`**?
-            1. R: Ler
-            2. W: Sobreescrever
-            3. A: Acrescentar
-        3. O que faz o comando **`read`**?
-            1. Lê o arquivo 
-        4. O que faz o comando **`readline`**?
-        5. Como podemos extrair valores específicos de um arquivo CSV utilizando Python?
-    - Escrita
-        
-        Os modos de leitura:
-        
-        R(padrão
-        
-        W: sobreescrever original
-        
-        A: Add mais linhas
-        
-        Copiando um arquivo com uma extensão diferente.
-        
-        Comando para ler/escrever arquivos.
-        
-        Comando para escrever em um arquivo, se o arquivo não existir, ele será criado.
-        
-    - Funções
-    - Escopo
+    
+    ## Leitura
+    
+    %%writefile banco.csv
+    age,job,marital,education,default,balance,housing,loan
+    30,unemployed,married,primary,no,1787,no,no
+    33,services,married,secondary,no,4789,yes,yes
+    35,management,single,tertiary,no,1350,yes,no
+    30,management,married,tertiary,no,1476,yes,yes
+    59,blue-collar,married,secondary,no,0,yes,no
+    35,management,single,tertiary,no,747,no,no
+    36,self-employed,married,tertiary,no,307,yes,no
+    39,technician,married,secondary,no,147,yes,no
+    41,entrepreneur,married,tertiary,no,221,yes,no
+    43,services,married,primary,no,-88,yes,yes
+    
+    ## Comando para ler todo o conteúdo de um arquivo.
+    
+    with open(file='./banco.csv', mode='r', encoding='utf8') as db:
+    print(db.read())
+    
+    ## Comando para ler o conteúdo de um arquivo uma linha por vez.
+    
+    with open(file='./banco.csv', mode='r', encoding='utf8') as linha:
+    print(linha.readline())
+    
+    ## Extraindo os valores da primeira coluna (idade).
+    
+    array = []
+    with open(file='./banco.csv', mode='r', encoding='utf8') as idade:
+    idade.readline()
+    age = idade.readline()
+    while age:
+    lista = age.split(sep=',')
+    array.append(lista)
+    age = idade.readline()
+    print(array)
+    
+    ## Comando para escrever em um arquivo, se o arquivo não existir, ele será criado.
+    
+    rescrever = None
+    with open(file='./banco3.csv', mode='w', encoding='utf8') as rescrever:
+    line = 'hello word!'
+    rescrever.write(line)
+    
+    with open(file='./banco3.csv', mode='r', encoding='utf8') as ler:
+    lendo = ler.read()
+    
+    print(lendo)
+    
+    ## Você trabalha na bolsa de valores e precisa simular o retorno de um investimento para diversos cenários:
+    
+    def bolsaValores(valor_inicial:float, taxa_juros_anual:float, anos:int) -> str:
+    valor_final = valor_inicial
+    for ano in range(1, anos+1):
+    valor_final = valor_final * (1 + taxa_juros_anual)
+    valor_final = round(valor_final, 2)
+    print(f'Para um valor inicial de R$ {valor_inicial} e uma taxa de juros anual de {taxa_juros_anual}, em {anos} anos você terá R$ {valor_final}')
+    
+    bolsaValores(16020, 0.13, 5)
     
 - Python Programação Funcional
 - Python Programação Orientada a Objetos
