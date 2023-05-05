@@ -303,8 +303,238 @@
     
     bolsaValores(16020, 0.13, 5)
     ``````
-- Python Programação Funcional
-- Python Programação Orientada a Objetos
-- Python Módulos & Pacotes
+# Programação Funcional
+
+##1. Função lambda;
+
+email = 'bryan.soares19@hotmail.com';
+extrair_nome_email = lambda email: email.split(sep='@')[0]
+nome_email = extrair_nome_email(email)
+
+def retorno(juros: float, investimento: float):
+  j = lambda investimento: investimento * (1 + juros)
+  i = j(investimento)
+  return i
+
+print(retorno(5, 1000))
+
+## 2. Função map
+
+numeros = [1, 2, 3]
+quadrado = map(lambda numero: numero ** 2, [21,212,43123,513213])
+print(list(quadrado))
+
+not1 = [8, 7, 6]
+not2 = [9, 5, 8]
+aritimetica = map(lambda n1, n2:(n1 + n2)/2, not1, not2)
+print(list(aritimetica))
+
+## 3. Função filter
+
+nomes = ['jose pedro', 'maria','maria','maria','maria', 'mauricio']
+numeros_par = filter(lambda nomes: nomes == 'maria', nomes)
+print(list(numeros_par))
+
+## 4. Função reduce
+
+from functools import reduce
+
+numeros = [1, 2, 3]
+soma = reduce(lambda x, y: x + y, numeros)
+print(soma)
+
+
+*texto em itálico*# Nova seção
+
+# Programação Orientada a Objetos
+
+### 1. Crie uma classe chamada Pessoa com atributos nome e idade. Adicione um método chamado apresentacao que imprime uma mensagem contendo o nome e a idade da pessoa.
+
+class Pessoa:
+  def __init__(self, nome, idade) -> None:
+    self.nome = nome
+    self.idade = idade
+  def toSay(self):
+    print(f"Meu nome é {self.nome} e tenho {self.idade} anos")
+
+
+joao = Pessoa('joão',19)
+joao.toSay()
+
+### 2. Crie uma classe chamada *ContaBancaria* com atributos privados saldo e numero. Adicione métodos para depositar, sacar e consultar o saldo da conta. Garanta que os métodos de saque e depósito não permitam valores negativos.
+
+class ContaBancaria:
+    def __init__(self, saldo, number):
+        self.__saldo = saldo
+        self.__number = number
+
+    def sacar(self, valor_saque):
+       if self.__saldo > 0 and valor_saque <= self.__saldo:
+          self.__saldo -= valor_saque
+       else:
+         print('valor indisponivel')
+
+    def depositar(self, valor_deposito):
+        self.__saldo += valor_deposito
+
+    def consulta(self):
+        print(f'seu saldo atual é de R$ {self.__saldo}')
+
+c = ContaBancaria(0, 2131332)
+c.depositar(100)
+c.sacar(20)
+c.consulta()
+
+### 3. Crie uma classe base chamada Animal com um método chamado falar. Crie classes derivadas chamadas Cachorro e Gato, que herdam de Animal. Implemente o método falar em ambas as classes derivadas para imprimir "Au au!" e "Miau!", respectivamente.
+
+self.falar(self)
+    
+
+class Gata(Animal):
+
+r = Retangulo(10, 20)
+r.calcular_area()
+
+### 4. Crie uma classe abstrata chamada FiguraGeometrica com um método abstrato chamado area. Crie classes derivadas chamadas Circulo e Retangulo, que herdam de FiguraGeometrica. Implemente o método area em ambas as classes derivadas para calcular a área do círculo e do retângulo, respectivamente.
+
+class ContaBancaria:
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.__saldo = saldo
+        self.limite = 1000
+
+    def depositar(self, valor):
+        self.__saldo += valor
+        print(f"Depósito de R${valor:.2f} realizado. Novo saldo: R${self.__saldo:.2f}")
+
+    def sacar(self, valor):
+        if valor > self.__saldo:
+            print("Saldo insuficiente.")
+        else:
+            self.__saldo -= valor
+            print(f"Saque de R${valor:.2f} realizado. Novo saldo: R${self.__saldo:.2f}")
+
+c = ContaBancaria('byan', 200)
+c._ContaBancaria__saldo = 400
+c.sacar(123)
+c.sacar(87)
+c.sacar(87)
+
+
+# Módulos & Pacotes
+
+### 1. Importe o módulo math e utilize a função sqrt para calcular a raiz quadrada de 81. Utilize o alias m ao importar o módulo.
+
+import math as m 
+m.sqrt(81)
+
+2. Crie um módulo chamado conversor.py com duas funções: celsius_para_fahrenheit(temp_celsius) e fahrenheit_para_celsius(temp_fahrenheit). Importe esse módulo e converta 100 graus Celsius para Fahrenheit e 212 graus Fahrenheit para Celsius.
+
+with open(file='conversor.py', mode='w', encoding='utf8') as conversor:
+  conversor.write('def celsius_para_fahrenheit(number): \n  return number*1.8+32')
+
+import conversor as cnv
+
+cnv.celsius_para_fahrenheit(100)
+
+3. Baixe e instale o pacote requests. Importe-o e faça uma requisição GET para 'https://api.github.com'. Verifique se a resposta tem o status code 200.
+
+import requests as req
+
+req.get('https://api.github.com')
+
+4. Crie um pacote chamado validador: email validar_email(email) que retorna True se o email fornecido for válido e False caso contrário. Importe e teste em um arquivo Python separado.
+
+with open(file='mail.py', mode='w', encoding='utf8') as email:
+    email.write('def valide_email(email):\n')
+    email.write('    if "@" in email and "." in email.split("@")[-1]:\n')
+    email.write('        return "TrueA"\n')
+    email.write('    else:\n')
+    email.write('        return "FalseA"\n')
+
+import mail as e
+
+print(e.validar_email('aluno@gmail.com'))  
+
+
+5. Utilize o módulo random para gerar uma lista de 10 números aleatórios entre 1 e 100. Em seguida, use o módulo statistics para calcular a média e o desvio padrão da lista.
+
+import random
+import statistics as stat
+
+numeros_aleatorios = [random.randint(1, 10) for i in range(1,10]
+print(f'Nota dos alunos foram: {numeros_aleatorios}')
+print(f'A média das notas:{stat.mean(numeros_aleatorios)}')
+print(f'E seu desvio padrão é:{stat.stdev(numeros_aleatorios)}')
+
+
+
+6. Crie um módulo chamado fibonacci.py que contenha uma função fibonacci(n) que retorne o n-ésimo número da sequência de Fibonacci. Importe e teste a função em um arquivo Python separado.
+
+with open(file='fibonacci.py', mode='w', encoding='utf8') as fbc:
+    fbc.write(
+'''def fibonacci(n):
+    if n <= 0:
+        raise ValueError("O valor de n deve ser positivo.")
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        a, b = 0, 1
+        for _ in range(n - 2):
+            a, b = b, a + b
+        return b
+''')
+
+import fibonacci as fib
+
+print(fib.fibonacci(5))
+
+
+7. Utilize o módulo os para criar um diretório chamado arquivos. Em seguida, crie um arquivo chamado dados.txt dentro do diretório arquivos e escreva nele a string "Dados importantes". Por fim, leia e imprima o conteúdo do arquivo dados.txt.
+
+import os
+
+if not os.path.exists('arquivos'):
+  os.mkdir('arquivos')
+
+with open(os.path.join('arquivos', 'dados.txt'), 'w') as arq:
+  arq.write('Dados importantes')
+
+with open(os.path.join('arquivos', 'dados.txt'),'r') as read:
+  print(read.read())
+
+
+8. Crie um módulo chamado ordenacao.py que contenha duas funções de ordenação: bubble_sort(lista) e selection_sort(lista). Importe e teste ambas as funções em um arquivo Python separado, utilizando uma lista de números desordenados.
+
+import os
+import sys
+
+sys.path.append('bubble-arc')  
+import bubble as b
+
+num_random = [i + 1 for i in range(0, 10, 2)]
+print(num_random)
+print(b.bubble_sort(num_random))
+
+9. Importe o módulo time e utilize a função sleep para criar um contador regressivo de 10 a 0, com um intervalo de 1 segundo entre cada número.
+
+from time import sleep as dormir
+
+for i in range(0, 10):
+  dormir(1)
+  print(f'{i+1} segundos')
+
+10. Utilize o módulo json para converter uma string JSON em um dicionário Python. Em seguida, acesse um valor específico do dicionário e imprima-o.
+
+import json
+
+dicionario = {'nome': 'Bryan', 'idade': 23, 'cidade': 'Porto Alegre'}
+format_json = json.dumps(dicionario)
+print(f'JSON: {format_json}')
+estrutura_dicionario = json.loads(format_json)
+print(f'Dicionario: {estrutura_dicionario}')
+print(estrutura_dicionario['nome'])
 - Python Tratamento de Erros
 - Python Scripting
