@@ -1,6 +1,6 @@
 ## Python
 
----
+--
 
 - Python Variáveis & Tipos de Dados
     - Introdução ao Google Colab
