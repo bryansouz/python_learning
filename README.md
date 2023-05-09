@@ -536,5 +536,123 @@ print(f'JSON: {format_json}')
 estrutura_dicionario = json.loads(format_json)
 print(f'Dicionario: {estrutura_dicionario}')
 print(estrutura_dicionario['nome'])
-- Python Tratamento de Erros
+# Tratamento de erros
+
+### Exercício 1
+
+Tratamento de divisão por zero.
+
+Peça ao usuário para inserir dois números e divida-os. Use um bloco try-except para lidar com a exceção ZeroDivisionError.
+
+number1 = input('Digite o primeiro numero:')
+number2 = input('Digite o segundo numero:')
+
+def divisao(n1, n2):
+  try:
+    return int(n1)/int(n2)
+  except ZeroDivisionError:
+    return 'Nao existe por divisão por zero'
+
+divisao(number1,number2)
+
+### Exercício 2
+
+Tratamento de conversão inválida.
+
+Peça ao usuário para inserir um número. Use um bloco try-except para lidar com a exceção ValueError se o usuário inserir um valor não numérico.
+
+def divisao(n1, n2):
+    try:
+        return int(n1) / int(n2)
+    except ZeroDivisionError:
+        return 'Não existe divisão por zero'
+    except ValueError:
+        return 'Insira somente números'
+
+
+def perguntas():
+    number1 = input('Digite o primeiro número:')
+    number2 = input('Digite o segundo número:')
+    return number1, number2
+
+
+while True:
+    number1, number2 = perguntas()
+    resultado = divisao(number1, number2)
+    
+    if isinstance(resultado, float):
+        break
+    
+    print(resultado)
+
+print("Resultado da divisão:", resultado)
+
+
+### Exercício 3
+
+
+Tratamento de múltiplas exceções.
+
+Crie uma função que aceite uma lista de números e uma string representando uma operação (soma, subtração, multiplicação, divisão). Use um bloco try-except para lidar com ZeroDivisionError e TypeError.
+
+class InvalidOperationError(Exception):
+    pass
+
+def calculate(numbers, operation):
+    result = 0
+    
+    if not isinstance(numbers, (list, tuple)):
+        raise TypeError("O argumento 'numbers' deve ser uma lista ou tupla de números.")
+    
+    if len(numbers) < 2:
+        raise ValueError("A lista de números deve conter pelo menos dois elementos.")
+    
+    try:
+        if operation == "soma":
+            result = sum(numbers)
+        elif operation == "subtração":
+            result = numbers[0] - sum(numbers[1:])
+        elif operation == "multiplicação":
+            result = 1
+            for num in numbers:
+                result *= num
+        elif operation == "divisão":
+            result = numbers[0]
+            for num in numbers[1:]:
+                result /= num
+        else:
+            raise InvalidOperationError(f"Operação '{operation}' inválida.")
+    except InvalidOperationError as v:
+        print(f"Operação '{operation}' inválida. Escolha entre soma, subtração, multiplicação ou divisão.")
+    except ZeroDivisionError as zde:
+        print(f"Erro: Divisão por zero ao realizar a operação '{operation}' na lista {numbers}.")
+    except TypeError as te:
+        print(f"Erro: A lista {numbers} deve conter apenas números. Detalhes: {te}")
+    else:
+        return result
+
+# Exemplo de uso
+numbers = [4, 2, False]
+operation = "divisão"
+result = calculate(numbers, operation)
+
+if result is not None:
+    print(f"O resultado da {operation} é: {result}")
+
+
+### Exercício 4
+
+
+Personalizando mensagens de erro.
+
+Modifique o exercício 3 para incluir uma mensagem de erro personalizada quando uma exceção for capturada, fornecendo informações adicionais sobre o erro.
+
+### Exercício 5
+
+
+Usando finally.
+
+Adicione um bloco finally ao exercício 3 para exibir uma mensagem, independentemente de uma exceção ser lançada ou não.
+
+
 - Python Scripting
