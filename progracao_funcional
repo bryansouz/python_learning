@@ -1,0 +1,56 @@
+Conceitos básicos de programação funcional
+  Imutabilidade
+  Funções puras
+  Funções de ordem superior
+  Funções lambda
+  Recursão
+  Exercícios:
+
+Escreva exemplos de funções puras e impuras e explique a diferença entre elas.
+Converta funções regulares em funções lambda e vice-versa.
+Implemente uma função recursiva para calcular o fatorial de um número.
+Funções e módulos integrados para programação funcional
+  map()
+  filter()
+  reduce()
+  itertools (takewhile, groupby, etc.)
+  functools (partial, reduce, etc.)
+Exercícios:
+
+  Use a função map() para converter uma lista de strings em uma lista de inteiros.
+  Use a função filter() para filtrar números ímpares em uma lista.
+  Use a função reduce() para calcular a soma de todos os elementos em uma lista.
+  Utilize a biblioteca itertools para gerar todas as combinações possíveis de uma lista de caracteres.
+  Utilize a função partial da biblioteca functools para criar uma função com alguns argumentos fixos.
+  
+Compreensões de lista e expressões geradoras
+  Compreensão de lista
+  Compreensão de dicionário
+  Expressões geradoras
+Exercícios:
+
+  Escreva uma compreensão de lista para obter o quadrado de todos os números em uma lista.
+  Escreva uma compreensão de dicionário para inverter as chaves e valores de um dicionário.
+  Escreva uma expressão geradora para gerar a sequência de Fibonacci.
+  Funções de manipulação de dados com Pandas
+  
+Series e DataFrames
+  Aplicar funções (apply, applymap, map, etc.)
+  Agrupar e agregar dados (groupby, agg, etc.)
+Exercícios:
+
+  Crie um DataFrame do Pandas a partir de um arquivo CSV e aplique uma função para normalizar uma coluna numérica.
+  Utilize a função applymap para aplicar uma função a todas as células de um DataFrame.
+  Agrupe um conjunto de dados por uma coluna categórica e calcule a média de outra coluna numérica.
+  
+ Testes e otimizações
+  Testes de unidade para funções puras
+  Medir o desempenho (timeit)
+  Técnicas de otimização (memoization, programação dinâmica)
+Exercícios:
+
+  Escreva testes de unidade para funções puras.
+  Compare o desempenho de duas implementações diferentes de uma função usando a biblioteca timeit.
+  Implemente memoization para melhorar o desempenho de uma função recursiva.
+  
+  
