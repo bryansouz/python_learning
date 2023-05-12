@@ -7,11 +7,6 @@
 5. Renomear colunas e índices
 6. Lidar com dados faltantes: dropna, fillna
 
-Exercícios:
-
-- Criar um DataFrame com dados fictícios e praticar a seleção e filtragem
-- Ler um arquivo CSV real e limpar os dados usando as técnicas aprendidas
-
 ### Transformação e agregação de dados
 
 1. Aplicar funções e mapeamentos em colunas e linhas (apply, applymap, map)
@@ -19,11 +14,6 @@ Exercícios:
 3. Agrupar dados com groupby e realizar operações de agregação (sum, mean, count)
 4. Pivotar e remodelar DataFrames com pivot, melt e stack/unstack
 5. Ordenar e classificar dados;
-
-Exercícios:
-
-- Usar um conjunto de dados real para transformar e agregar informações
-- Resolver problemas práticos, como calcular estatísticas agregadas para grupos específicos
 
 ### Combinação e técnicas avançadas
 
