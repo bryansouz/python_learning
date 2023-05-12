@@ -18,7 +18,7 @@ Exercícios:
 2. Adicionar e remover colunas e linhas
 3. Agrupar dados com groupby e realizar operações de agregação (sum, mean, count)
 4. Pivotar e remodelar DataFrames com pivot, melt e stack/unstack
-5. Ordenar e classificar dados
+5. Ordenar e classificar dados;
 
 Exercícios:
 
