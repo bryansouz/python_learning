@@ -26,10 +26,3 @@ Exercícios:
 
 - Combinar diferentes conjuntos de dados relacionados para criar um único DataFrame
 - Resolver problemas do mundo real que envolvem análise de séries temporais
-
-### Prática e projetos
-
-1. Resolver desafios e exercícios de Data Wrangling em plataformas como Kaggle e LeetCode
-2. Desenvolver um projeto prático relacionado à sua área de interesse (por exemplo, análise de dados financeiros, análise de mídias sociais)
-
-Ao seguir esse plano de aprendizado focado em exercícios, você desenvolverá habilidades sólidas em Data Wrangling com Python e estará pronto para lidar com problemas reais em análise de dados.
